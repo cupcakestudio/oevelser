@@ -8,7 +8,7 @@
   <link href="htmlstruktur.css" rel="stylesheet">
 </head>
 <body>
-  <header>04-append</header>
+  <header>05-testLoad</header>
   <main>
     <p>Undertitel</p>
     <section>
@@ -25,7 +25,7 @@
   <footer>Tema7 øvelser js and DOM 2SEM E22 </footer></footer>
 </body>
 <script>
-  //tester om DOM'en er loaded før JS går igang
+  //("tester om") DOM'en er loaded før JS går igang
   document.addEventListener("DOMContentLoaded", start);
 
   function start(){
@@ -41,7 +41,7 @@
  //øvelse 4.1 - opret ny article-element med createElement
  const article = document.createElement("article");
  //tilføj nyt billede, overskrift og tekst til nye article
- article.innerHTML = "<h2>Nyt element </h2> <img src='https://placeimg.com/640/480/tech' alt='tech'> <p>This is a funny looking cat</p>"
+ article.innerHTML = "<h2>Nyt element </h2> <img src='https://placeimg.com/640/480/tech' alt='tech'> <p>Sovt udseende den her kat har</p>"
   //tilføj ny article efter de eksisterende article elementer 
  document.querySelector("section").appendChild(article);
 
