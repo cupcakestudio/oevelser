@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5  struktur</title>
+  <link href="htmlstruktur.css" rel="stylesheet">
+</head>
+<body>
+  <header>04-append</header>
+  <main>
+    <p>Undertitel</p>
+    <section>
+      <article>
+        <img src="" alt="" id="img">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, facere minus quos itaque sapiente neque in, nihil iure incidunt illum accusantium libero odio soluta quisquam. Incidunt adipisci repellendus repellat odio.
+      </article>
+      <article>
+        <img src="" alt="" id="img1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ex aspernatur blanditiis assumenda temporibus veniam, quaerat dignissimos velit nobis corrupti fugit atque ab ullam, dolorem molestiae? Dolore minus eveniet fugit!
+      </article>
+    </section>
+  </main>
+  <footer>Tema7 øvelser js and DOM 2SEM E22 </footer></footer>
+</body>
+<script>
+  //tester om DOM'en er loaded før JS går igang
+  document.addEventListener("DOMContentLoaded", start);
+
+  function start(){
+  //øvelse 2a - css  selectors element
+ let img = document.querySelector("#img");
+ img.src="https://placeimg.com/640/480/people"; //erstat billede kilde + tekst
+ img.alt="Dette her er ikke en kat, det en person";
+ 
+ let img1 = document.querySelector("#img1");
+ img1.src="https://placeimg.com/640/480/nature"; //erstat billede kilde og tilføjer mere tekst
+ img1.alt="Det her er bare mere tekst til alt attr.";
+
+ //øvelse 4.1 - opret ny article-element med createElement
+ const article = document.createElement("article");
+ //tilføj nyt billede, overskrift og tekst til nye article
+ article.innerHTML = "<h2>Nyt element </h2> <img src='https://placeimg.com/640/480/tech' alt='tech'> <p>This is a funny looking cat</p>"
+  //tilføj ny article efter de eksisterende article elementer 
+ document.querySelector("section").appendChild(article);
+
+  }
+</script>
+</html>
