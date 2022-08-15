@@ -1,0 +1,34 @@
+* {
+margin: 10px;
+}
+h1, footer {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+p {
+  text-align: start;
+}
+
+
+
+section { 
+  /*custom var to make for an screen size display*/
+  /* found here: https://archive.hankchizljaw.com/wrote/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/*/
+  --auto-grid-min-size:16rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+/*add wrapper so it gets horizontal and centers elements, when 'mobile' size*/
+.wrapper
+{ max-width: 65rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}  
+ article {
+  display: flex;
+  flex-direction: column;
+} 
