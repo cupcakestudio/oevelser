@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuerySelect</title>
+  <link href="htmlstruktur.css" rel="stylesheet">
+</head>
+<body>
+  <header> Titel</header>
+  <main>
+    <p>Undertitel</p>
+    <section>
+      <article>
+        <img src="https://placeimg.com/640/480/animals" alt="animal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, facere minus quos itaque sapiente neque in, nihil iure incidunt illum accusantium libero odio soluta quisquam. Incidunt adipisci repellendus repellat odio.
+      </article>
+      <article>
+        <img src="https://placeimg.com/640/480/arch" alt="arch">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ex aspernatur blanditiis assumenda temporibus veniam, quaerat dignissimos velit nobis corrupti fugit atque ab ullam, dolorem molestiae? Dolore minus eveniet fugit!
+      </article>
+    </section>
+  </main>
+  <footer>Tema7 øvelser js and DOM 2SEM E22 </footer></footer>
+</body>
+<script>
+  //øvelse 2a - css  selectors element
+  const header = document.querySelector("header");
+  console.log(header); 
+  const main = document.querySelector("main");
+  console.log(main);
+  const section = document.querySelector("section");
+  console.log(section);
+  const article = document.querySelector("article");
+  console.log(article);
+  const footer = document.querySelector("footer");
+  console.log(footer);
+  const img = document.querySelector("img");
+  console.log(img);
+  //øvelse 2a - pseudo selectors
+  let pheader = document.querySelector("header");
+  console.log(pheader); 
+  let pmain = document.querySelector("main");
+  console.log(pmain);
+  let psection = document.querySelector("main:nth-child(1)");
+  console.log(psection);
+  let particle = document.querySelector("main:nth-child(4), :nth-child(5)"); //work??
+  console.log(particle);
+  let pfooter = document.querySelector("footer");
+  console.log(pfooter);
+  let pimg = document.querySelector("article:first-child");
+  console.log(pimg);
+</script>
+</html>
