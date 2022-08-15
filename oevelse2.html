@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Øvelse 2 - sig goddag</title>
+</head>
+<body>
+  <script>
+    var time = new Date().getHours();
+    const time1 = 17 // konstant til at teste, 
+    //bare skift variablerne ud også virker det også i realtid
+    if (time1 > 5 && time1 < 10)  {
+      console.log("Godmorgen");
+    }
+    else if (time1 > 10 && time1 < 18)  {
+      console.log("Goddag");
+    }
+    else if (time1 > 18 && time1 < 24)  {
+      console.log("Godaften");
+    }
+    else  {
+      console.log("Godnat");
+    }
+  </script>
+</body>
+</html>
