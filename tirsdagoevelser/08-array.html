@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 Array</title>
+  <link href="htmlstruktur.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Playliste</h1>
+
+ <ul id="display">
+ </ul>
+   
+</body>
+<script>
+
+//øvelse 8 array
+const playliste = ["The Devil is Human","Wait A Minute!", "Coffee", "Blue Skies", "Strangers", 
+"Potion for Love", "Man", "Blue", "Secret Love Song", "Bitchs Broken Hearts"];
+
+playliste.forEach(playlisteLinje);
+
+function playlisteLinje(element){
+  display.innerHTML += "<li>" + element + "</li>"; //indsæt ny liste element og concat på listen hver gang.
+  
+}
+
+/* display.appendChild(playliste); */
+/*
+//øvelse 5
+  //("tester om") DOM'en er loaded før JS går igang
+document.addEventListener("DOMContentLoaded", start);
+
+function start(){
+  //øvelse 6
+  //Første billede
+ let img = document.querySelector("#img");
+ //random number generet for at færddiggøre url, i en anonym arrow funktion sat på en EventHandler
+ var randomNumber = Math.random()*11; //random number ml 0 og 10 - fra øvelse 3 (mandag d.22)
+ img.addEventListener('click', () => img.src="https://placeimg.com/640/480/people?t=" + randomNumber);
+ img.alt="Klik for at se en person";
+
+ let img1 = document.querySelector("#img1");
+ img1.src="https://placeimg.com/640/480/nature"; //erstat billede kilde og tilføjer mere tekst
+ img1.alt="Det her er bare mere tekst til alt attr.";
+
+ //øvelse 4.1 - opret ny article-element med createElement
+ const article = document.createElement("article");
+ //tilføj nyt billede, overskrift og tekst til nye article
+ article.innerHTML = "<h2>Nyt element </h2> <img src='https://placeimg.com/640/480/tech' alt='tech'> <p>Sjovt udseende den her kat har</p>"
+  //tilføj ny article efter de eksisterende article elementer 
+ document.querySelector("section").appendChild(article);
+
+ //øvelse 7 - boxshadow
+//tilføj klasse til hver af article elementer - getElementsByTagName returns a NodeList.
+
+ const article1 = document.getElementsByTagName("article");
+
+
+ article1[0].classList.add("boxShadow");
+ article1[1].classList.add("boxShadow");
+ article1[2].classList.add("boxShadow");
+
+ //EventHandlers
+ article1[0].addEventListener("mouseover", toggleShadow);
+ article1[1].addEventListener("mouseover", toggleShadow);
+ article1[2].addEventListener("mouseover", toggleShadow); 
+ 
+
+ function toggleShadow() {
+  this.classList.remove("boxShadow");
+  this.addEventListener("mouseout", () => this.classList.add("boxShadow"));
+ }
+ //fjern eventhandler her, for at 'reset' så den kan lytte efter
+ //eventhandler igen.
+ this.removeEventListener("mouseover", toggleShadow); 
+ this.removeEventListener("mouseout", () => this.classList.add("boxShadow"));
+ 
+}
+*/
+</script>
+</html>
