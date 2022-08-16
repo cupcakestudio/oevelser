@@ -43,7 +43,8 @@
     //mit eget kode til opgave 9
     //EventHandler der tjekker om DOM er indlæst
     window.addEventListener('DOMContentLoaded', start);
-    function start(){
+    function start()
+    {
         const pTag = document.querySelectorAll("p"); //finder alle p og ændre typo når der klikkes på et p-tag
         pTag.forEach(sentence => sentence.addEventListener('click', addTypo));
 
