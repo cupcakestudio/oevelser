@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow 1</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h1>Tro på det...</h1> 
+  <!-- kan ikke hentes fra link, må gøre det lokalt "https://github.com/martinbregnhoi/Tema7E20/tree/master/billeder/img1.png" alt="slideshow billeder fra github">-->
+  <img src= "slideshowBilleder/img1.png" alt="slideshow fra github">
+  <button>Videre</button>
+</body>
+
+<!-- <script>
+BILLEDER DIREKTE FRA SRC LINKET
+var arrayIndex = 1;
+
+var imgSrc = document.querySelector("img");
+const buttonNext = document.querySelector("button"); 
+buttonNext.addEventListener('click', nextBtn);
+
+function nextBtn() {
+ 
+ var newarrayIndex = arrayIndex++;
+ imgSrc.src = ("slideshowBilleder/img" + newarrayIndex + ".png"); 
+
+
+ } </script>  -->
+
+ 
+<script>
+/*  BILLEDER I ET ARRAY */
+ var picArray = ["slideshowBilleder/img1.png", "slideshowBilleder/img2.png", "slideshowBilleder/img3.png","slideshowBilleder/img4.png","slideshowBilleder/img5.png"]
+ 
+var arrayIndex = 0;
+
+var imgSrc = document.querySelector("img");
+const buttonNext = document.querySelector("button"); 
+buttonNext.addEventListener('click', nextBtn);
+
+/*   function nextBtn() {
+ 
+ var newarrayIndex = arrayIndex++;
+ imgSrc.src = (picArray[newarrayIndex]); 
+
+
+ } */  
+ function nextBtn() {
+ 
+  var newarrayIndex = arrayIndex++;
+
+  
+  if (newarrayIndex < 4) {
+    imgSrc.src = (picArray[arrayIndex]);
+    console.log(picArray[newarrayIndex]);
+  }
+  else {
+    buttonNext.textContent ="Forfra";
+    imgSrc.src = (picArray[0]);
+  } 
+ } 
+ </script>  
+</html>
