@@ -1,7 +1,7 @@
   
 
 //fandt via MDN  docs
- function getRandomIntInclusive(min, max) {
+ /* function getRandomIntInclusive(min, max) {
   min = Math.ceil(0);
   max = Math.floor(10);
   return Math.floor(Math.random() * (10 - 0 + 1) + 0); //The maximum is inclusive and the minimum is inclusive
@@ -9,7 +9,8 @@
 
  var randomNumber = getRandomIntInclusive(0,10); //generer tilfældigt tal
 
-
+ */
+var randomNumber = Math.round(Math.random()*11); //runder tal op til heltal som er generet tilfældigt ml 1 og 10
   const guess = document.querySelector("button");
   guess.addEventListener('click', guessNumber);
  //en gætte-tæller, tæller hvor mange gange man har forsøgt
