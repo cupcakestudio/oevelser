@@ -10,7 +10,7 @@
  var randomNumber = getRandomIntInclusive(0,10); //generer tilfældigt tal
 
  */
-var randomNumber = Math.round(Math.random()*11); //runder tal op til heltal som er generet tilfældigt ml 1 og 10
+var randomNumber = Math.floor(Math.random()*11); //runder tal op til heltal som er generet tilfældigt ml 1 og 10
   const guess = document.querySelector("button");
   guess.addEventListener('click', guessNumber);
  //en gætte-tæller, tæller hvor mange gange man har forsøgt
