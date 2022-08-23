@@ -23,6 +23,7 @@ function guessNumber()
    if (randomNumber == document.querySelector("#tal").value) 
   {
     alert(document.querySelector("#tal").value +" er rigtigt! Du brugte " + guessCounter + " forsøg. Prøv igen med et nyt tal?");
+    window.location.reload;
   }
   else if (document.querySelector("#tal").value > randomNumber)
   {
