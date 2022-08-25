@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    article {
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid #110000;
+    }
+  </style>
+</head>
+<body>
+  <section class="container"></section> <!-- container liste i html -->
+  <template>
+  <article id ="liste">
+    <h3></h3>
+    <img src="" alt="">
+    <p></p>
+    <p></p>
+    
+  </article>
+</template>
+</body>
+
+<script>
+  window.addEventListener("DOMContentLoaded", start);
+let dyr = [
+    {"navn":"gris", "type":"pattedyr", "billede":"https://mabe-kea.dk/E19/pics/pig.png", "levested":"svinefarm"}, 
+    {"navn":"frø", "type":"amfibie", "billede":"https://mabe-kea.dk/E19/pics/frog.png", "levested":"sø"},
+    {"navn":"ræv", "type":"pattedyr", "billede":"https://mabe-kea.dk/E19/pics/fox.png", "levested":"hul"},
+    {"navn":"sild", "type":"fisk", "billede":"https://mabe-kea.dk/E19/pics/sild.jpg", "levested":"havet"},
+    {"navn":"krokodile", "type":"krybdyr", "billede":"https://mabe-kea.dk/E19/pics/kroko.jpg", "levested":"flod"}
+]
+function start (){
+  //dyr objekt
+  const liste = document.querySelector(".container"); //container liste elementerne skal ind i
+  const temp = document.querySelector("template"); //templaten som elementerne skal opstilles efter
+
+
+dyr.forEach(dyrvisning => { 
+//put clone Nodes ind i listen
+
+    let clone = temp.cloneNode(true).content;//få fat i template taggets indhold
+    clone.querySelector("h3").textContent = dyrvisning.navn;
+    clone.querySelector("p").textContent = "Type: " + dyrvisning.type;
+    clone.querySelector("p:last-child").textContent = "Levested: " + dyrvisning.levested;
+    clone.querySelector("img").src = dyrvisning.billede;  
+    liste.appendChild(clone); //tilføj cloneNode element til container 
+}
+)
+
+}
+</script>
+</html>
