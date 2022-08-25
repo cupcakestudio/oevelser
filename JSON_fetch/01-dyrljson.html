@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    article {
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid #110000;
+    }
+  </style>
+</head>
+<body>
+  <section class="container"></section> <!-- container liste i html -->
+  <template>
+  <article>
+    <h3></h3>
+    <img src="" alt="">
+    <p></p>
+    <p></p>
+    
+  </article>
+</template>
+</body>
+
+<script>
+"use strict";
+const fil = "alleDyr.json"; 
+console.log("hi");
+//async function to get JSON data with fetch 
+async function hentData(fil){
+  const resultat = await fetch(fil); 
+  const json = await resultat.json();
+  vis(json);
+  
+    
+}
+
+  function vis(json){
+console.log("hi");
+const container = document.querySelector(".container"); //container liste elementerne skal ind i
+const temp = document.querySelector("template"); //templaten som elementerne skal opstilles efter
+json.forEach(dyr => { 
+  //put clone Nodes ind i listen
+  
+  const clone = temp.cloneNode(true).content;//få fat i template taggets indhold
+  clone.querySelector("h3").textContent = dyr.navn;
+  clone.querySelector("img").src = dyr.billede;
+  clone.querySelector("p").textContent = "Type: " + dyr.type;
+  clone.querySelector("p:last-child").textContent = "Levested: " + dyr.levested;
+  container.appendChild(clone); //tilføj cloneNode element til container 
+    
+  }
+   )
+  }
+  hentData(fil); //async function kaldes her
+
+</script>
+</html>
