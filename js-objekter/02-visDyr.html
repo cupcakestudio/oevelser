@@ -24,12 +24,7 @@ function start (){
   const dyr = {"navn":"gris", "type":"pattedyr", "billede":"https://mabe-kea.dk/E19/pics/pig.png", "levested":"svinefarm"};
   
   //udskriv objekt værdier i DOM form
-const dyrobject = document.querySelector("#Dyr");
-const dyrenavn = `${dyr.navn}`;
-dyrobject.querySelector("h3").textContent = dyrenavn;
-dyrobject.querySelector("p").textContent = "Type: "+ dyr.type;
-dyrobject.querySelector("p:last-child").textContent = "Levested: " +dyr.levested;
-dyrobject.querySelector("img").src = dyr.billede;
+  console.log(`navn:${dyr.navn} type:${dyr.type} ${dyr.billede} levelsted:${dyr.levested}`);
 }
 </script>
 </html>
