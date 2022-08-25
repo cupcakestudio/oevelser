@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    article {
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid #110000;
+    }
+  </style>
+</head>
+<body>
+  <section class="container"></section> <!-- container liste i html -->
+  <template>
+  <article>
+    <h3></h3>
+    <p></p>
+    <ul></ul>
+    
+  </article>
+</template>
+</body>
+
+<script>
+"use strict";
+const fil = "bilerUdstyr.json"; 
+
+//async function to get JSON data with fetch 
+async function hentData(fil){
+  const resultat = await fetch(fil); 
+  const json = await resultat.json();
+  vis(json);
+  
+    
+}
+
+  function vis(json){
+
+const container = document.querySelector(".container"); //container liste elementerne skal ind i
+const temp = document.querySelector("template"); //templaten som elementerne skal opstilles efter
+json.forEach(biler => { 
+  //put clone Nodes ind i listen
+  
+  const clone = temp.cloneNode(true).content;//få fat i template taggets indhold
+  clone.querySelector("h3").textContent = biler.mærke;
+  clone.querySelector("p").textContent ="Motor: " + biler.motor + " Model:  " + biler.model;
+  //forEach loop der skal udskrive udstyr for hvert bil i punktform
+  biler.udstyr.forEach(udstyr => {
+    const li = document.createElement("li"); //lav liste element
+    li.textContent = udstyr;
+    clone.querySelector("ul").appendChild(li); //føj liste element til clone Noden i ul. 
+  })
+  container.appendChild(clone); //tilføj cloneNode element til container 
+    
+  }
+   )
+  }
+  hentData(fil); //async function kaldes her
+
+</script>
+</html>

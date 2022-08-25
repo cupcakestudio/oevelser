@@ -1,0 +1,25 @@
+[
+{
+  "mærke": "Citröen",
+  "model": "c1",
+  "motor": "Benzin",
+  "udstyr": ["lædersæder", "blinklys", "diskokugle"]
+
+},
+{
+  "mærke": "Volvo",
+  "model": "Polo",
+  "motor": "Diesel",
+  "udstyr": ["sædevarme", "gps"]
+
+}, 
+
+{
+  "mærke": "Tesla",
+  "model": "S",
+  "motor": "El",
+  "udstyr": ["soltag", "auto-døre"]
+
+}
+
+]
