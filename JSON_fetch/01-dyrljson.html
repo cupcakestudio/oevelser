@@ -29,7 +29,7 @@
 <script>
 "use strict";
 const fil = "alleDyr.json"; 
-console.log("hi");
+
 //async function to get JSON data with fetch 
 async function hentData(fil){
   const resultat = await fetch(fil); 
@@ -40,7 +40,7 @@ async function hentData(fil){
 }
 
   function vis(json){
-console.log("hi");
+
 const container = document.querySelector(".container"); //container liste elementerne skal ind i
 const temp = document.querySelector("template"); //templaten som elementerne skal opstilles efter
 json.forEach(dyr => { 
